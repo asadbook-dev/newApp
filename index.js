@@ -42,6 +42,11 @@ const server = http.createServer((req, res) => {
                 if(err) throw err
                 res.end(content)
             })
+        } else if(req.url === "/api/admin"){
+
+            const admin = {name: "Asadbek", surname: "Khudayberdiev", job: "FrontEnd developer"}
+
+            res.end(JSON.stringify(admin))
         }
         // res.end(`
         //     <h3>Send name</h3>
